@@ -129,7 +129,7 @@ Raw SQL statements won't be logged out-of-the-box, but you can attach Bridgetown
 Bridgetown.db.loggers << Bridgetown.logger
 ```
 
-For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://sequel.jeremyevans.net/rdoc/files/doc/cheat_sheet_rdoc.html).
+For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel).
 
 ## Contributing
 
