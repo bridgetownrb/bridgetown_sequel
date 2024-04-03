@@ -36,6 +36,33 @@ BridgetownSequel.load_tasks
 
 Finally, you'll want to create a `models` folder at the top-level of your site repo, as well as a `migrations` folder.
 
+### Resolving PostgreSQL fork error on macOS
+
+There's a bug on macOS which will crash Bridgetown & Sequel unless you disable PostgreSQL's GSSAPI support (not needed for local development). You'll need to update your configuration as follows:
+
+```rb
+init :bridgetown_sequel do
+  connection_options do
+    if RUBY_PLATFORM.include?("darwin")
+      driver_options { gssencmode "disable" }
+    end
+  end
+end
+```
+
+### Ensuring Puma forks successfully in production
+
+In production, Bridgetown's Puma server configuration is set to "clustered mode" which forks the server process several times. This will result in Sequel connection errors if you don't shut down the database connection first. Update your `config/puma.rb` file so the production config looks like this:
+
+```rb
+if ENV["BRIDGETOWN_ENV"] == "production"
+  workers ENV.fetch("BRIDGETOWN_CONCURRENCY") { 4 }
+  before_fork do
+    Bridgetown.db.disconnect if defined?(Bridgetown) && Bridgetown.respond_to?(:db)
+  end
+end
+```
+
 ## Usage
 
 To add your first database table & model, first you'll want to add a model file to your new `models` folder. It can look as simple as this:
