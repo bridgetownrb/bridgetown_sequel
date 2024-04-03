@@ -50,7 +50,7 @@ end
 Next, you'll want to create a migration. Run the following command:
 
 ```shell
-bin/bridgetown db::migrations:new name=create_projects
+bin/bridgetown db::migrations:new filename=create_projects
 ```
 
 And modify the new `migrations/001_create_projects.rb` file to look something like this:
@@ -131,11 +131,6 @@ Bridgetown.db.loggers << Bridgetown.logger
 
 For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://sequel.jeremyevans.net/rdoc/files/doc/cheat_sheet_rdoc.html).
 
-## Testing
-
-* Run `bundle exec rake test` to run the test suite
-* Or run `script/cibuild` to validate with Rubocop and Minitest together.
-
 ## Contributing
 
 1. Fork it (https://github.com/bridgetownrb/bridgetown_sequel/fork)
@@ -144,3 +139,8 @@ For a quick reference on what you can do with the Sequel DSL, check out this [ha
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create a new Pull Request
+
+## Testing
+
+* Run `bundle exec rake test` to run the test suite
+* Or run `script/cibuild` to validate with Rubocop and Minitest together.
