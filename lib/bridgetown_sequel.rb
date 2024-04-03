@@ -17,7 +17,7 @@ Bridgetown.initializer :bridgetown_sequel do |
   config,
   models_dir: ENV.fetch("BRIDGETOWN_SEQUEL_MODELS_DIR", "models"),
   skip_autoload: false,
-  model_setup: -> {},
+  model_setup: ->(model) {},
   connection_options: {}
 |
   unless skip_autoload
