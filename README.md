@@ -31,7 +31,7 @@ Bridgetown.load_tasks
 
 # Now add this:
 require "bridgetown_sequel"
-Bridgetown::Sequel.load_tasks
+BridgetownSequel.load_tasks
 ```
 
 Finally, you'll want to create a `models` folder at the top-level of your site repo, as well as a `migrations` folder.

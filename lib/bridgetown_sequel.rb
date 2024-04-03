@@ -6,12 +6,10 @@ require "bridgetown"
 # See: https://stackoverflow.com/questions/52671926/rails-may-have-been-in-progress-in-another-thread-when-fork-was-called
 require "sequel"
 
-module Bridgetown
-  module Sequel
-    def self.load_tasks(models_dir: "models")
-      ENV["BRIDGETOWN_SEQUEL_MODELS_DIR"] ||= models_dir
-      load File.expand_path("tasks/sequel_database.rake", __dir__)
-    end
+module BridgetownSequel
+  def self.load_tasks(models_dir: "models")
+    ENV["BRIDGETOWN_SEQUEL_MODELS_DIR"] ||= models_dir
+    load File.expand_path("tasks/sequel_database.rake", __dir__)
   end
 end
 
