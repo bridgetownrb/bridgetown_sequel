@@ -6,9 +6,10 @@ It's been tested only with PostgreSQL, but it should support any of the database
 
 ## Installation
 
-Run this command to add this plugin to your site's Gemfile:
+Run these commands to add this plugin along with the database adapter of your choice to your site's Gemfile:
 
 ```shell
+bundle add pg # or sqlite3, etc.
 bundle add bridgetown_sequel
 ```
 
