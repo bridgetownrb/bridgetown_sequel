@@ -75,6 +75,12 @@ class Project < Sequel::Model
 end
 ```
 
+Let's set up the database now. Run this command (you only need to do this once for your repo):
+
+```shell
+bin/bridgetown db:setup
+```
+
 Next, you'll want to create a migration. Run the following command:
 
 ```shell
@@ -99,13 +105,7 @@ Sequel.migration do
 end
 ```
 
-Now let's set up the database and run migrations. First, run this command (you only need to do this once for your repo):
-
-```shell
-bin/bridgetown db:setup
-```
-
-Then run migrations:
+Finally, run migrations:
 
 ```shell
 bin/bridgetown db:migrate
