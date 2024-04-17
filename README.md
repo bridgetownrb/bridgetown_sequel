@@ -166,7 +166,7 @@ Bridgetown.db.loggers << Bridgetown.logger
 > [!TIP]
 > For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel).
 > 
-> Also read [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest) and particularly all the [plugins](https://gemdocs.org/gems/sequel/5.79.0/Sequel/Plugins.html) you can add to Sequel models.
+> Also read [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest), and check out all the [plugins & database extensions](http://sequel.jeremyevans.net/plugins.html#extensions-database-sequel) you can add to Sequel models.
 
 ----
 
