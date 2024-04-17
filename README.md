@@ -4,6 +4,10 @@ A Bridgetown plugin to make it easy to integrate and use [Sequel](https://sequel
 
 It's been tested only with PostgreSQL, but it should support any of the databases supported by Sequel.
 
+## Sequel Documentation
+
+If you're like me and you greatly prefer YARD's UI to RDoc, check out [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest).
+
 ## Installation
 
 Run these commands to add this plugin along with the database adapter of your choice to your site's Gemfile:
@@ -157,7 +161,7 @@ Raw SQL statements won't be logged out-of-the-box, but you can attach Bridgetown
 Bridgetown.db.loggers << Bridgetown.logger
 ```
 
-For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel).
+For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel). Also read [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest) and particularly all the [plugins](https://gemdocs.org/gems/sequel/5.79.0/Sequel/Plugins.html) you can add to Sequel models.
 
 ## Contributing
 
