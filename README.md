@@ -4,9 +4,8 @@ A Bridgetown plugin to make it easy to integrate and use [Sequel](https://sequel
 
 It's been tested only with PostgreSQL, but it should support any of the databases supported by Sequel.
 
-## Sequel Documentation
-
-If you're like me and you greatly prefer YARD's UI to RDoc, check out [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest).
+> [!TIP]
+> If you're like me and you greatly prefer YARD's UI to RDoc, check out [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest).
 
 ## Installation
 
@@ -127,7 +126,8 @@ Now let's test your model. Run `bin/bridgetown console` (or `bin/bt c` for short
 
 You should now see that you can save and load project records in your database.
 
-If you ever need to drop your database and start over, run `bin/bridgetown db:drop`.
+> [!NOTE]
+> If you ever need to drop your database and start over, run `bin/bridgetown db:drop`.
 
 ### Optional Configuration
 
@@ -161,7 +161,14 @@ Raw SQL statements won't be logged out-of-the-box, but you can attach Bridgetown
 Bridgetown.db.loggers << Bridgetown.logger
 ```
 
-For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel). Also read [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest) and particularly all the [plugins](https://gemdocs.org/gems/sequel/5.79.0/Sequel/Plugins.html) you can add to Sequel models.
+----
+
+> [!TIP]
+> For a quick reference on what you can do with the Sequel DSL, check out this [handy cheat sheet](https://devhints.io/sequel).
+> 
+> Also read [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest) and particularly all the [plugins](https://gemdocs.org/gems/sequel/5.79.0/Sequel/Plugins.html) you can add to Sequel models.
+
+----
 
 ## Contributing
 
@@ -174,5 +181,5 @@ For a quick reference on what you can do with the Sequel DSL, check out this [ha
 
 ## Testing
 
-* Run `bundle exec rake test` to run the test suite
+* Run `script/test` to run the test suite.
 * Or run `script/cibuild` to validate with Rubocop and Minitest together.
