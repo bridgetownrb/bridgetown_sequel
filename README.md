@@ -87,7 +87,7 @@ bin/bridgetown db:setup
 Next, you'll want to create a migration. Run the following command:
 
 ```shell
-bin/bridgetown db::migrations:new filename=create_projects
+bin/bridgetown db:migrations:new filename=create_projects
 ```
 
 And modify the new `migrations/001_create_projects.rb` file to look something like this:
