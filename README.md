@@ -26,6 +26,8 @@ except :sequel_tasks do
 end
 ```
 
+(For a Unix socket, your hostname in the connection string should be something like `%2Fvar%2Frun%2Fpostgresql` instead of `localhost`)
+
 You'll also want to add this plugin's Rake tasks to your `Rakefile`:
 
 ```rb
