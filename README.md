@@ -5,7 +5,7 @@ A Bridgetown plugin to make it easy to integrate and use [Sequel](https://sequel
 It's been tested only with PostgreSQL, but it should support any of the databases supported by Sequel.
 
 > [!TIP]
-> If you're like me and you greatly prefer YARD's UI to RDoc, check out [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/latest).
+> If you're like me and you greatly prefer YARD's UI to RDoc, check out [Sequel on Gemdocs](https://gemdocs.org/gems/sequel/5.97.0/).
 
 ## Installation
 
