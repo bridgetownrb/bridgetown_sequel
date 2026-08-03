@@ -114,6 +114,8 @@ namespace :db do
       models.each { say_status :database, "Annotated #{_1}" }
     end
   rescue Sequel::DatabaseError
-    say_status :database, "Annotations failed. Perhaps you performed a rollback?", :red
+    automation do
+      say_status :database, "Annotations failed. Perhaps you performed a rollback?", :red
+    end
   end
 end

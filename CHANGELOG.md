@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-08-03
+
+- Fix `say_status` not living inside of automation block
+
 ## [1.1.1] - 2024-04-03
 
 - Fix lambda error in initializer
